@@ -1,0 +1,360 @@
+/* Media Hero Section */
+.media-hero {
+    height: 60vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 80px;
+}
+
+.media-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.media-hero .hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+.media-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.media-hero p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+/* Media Sections - Matching Homepage Style */
+.social-media-section,
+.galleries-section,
+.press-coverage-section {
+    padding: 6rem 0;
+    background: white;
+}
+
+.social-media-section:nth-child(even),
+.galleries-section:nth-child(even),
+.press-coverage-section:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.social-media-section h2,
+.galleries-section h2,
+.press-coverage-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 4rem;
+    font-weight: 600;
+}
+
+/* Media Row - Horizontal Layout */
+.media-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media Cards - Matching Sport Cards from Homepage */
+.media-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 400px;
+    position: relative;
+}
+
+.media-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.media-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.media-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.media-card:hover .media-image img {
+    transform: scale(1.05);
+}
+
+/* Placeholder Images */
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 4rem;
+    transition: all 0.3s ease;
+}
+
+.media-card:hover .placeholder-image {
+    transform: scale(1.05);
+}
+
+/* Social Media Placeholders */
+.instagram-placeholder {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.twitter-placeholder {
+    background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+}
+
+.facebook-placeholder {
+    background: linear-gradient(135deg, #1877f2 0%, #0d6efd 100%);
+}
+
+/* Gallery Placeholders */
+.gallery-placeholder {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Press Placeholders */
+.press-placeholder {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+/* Media Overlay - Matching Sport Overlay from Homepage */
+.media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.media-card:hover .media-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+}
+
+.media-icon {
+    margin-bottom: 1rem;
+}
+
+.media-icon i {
+    font-size: 2.5rem;
+    color: #3498db;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.8rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.media-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.media-overlay p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Media Stats */
+.media-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.media-stats span {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.media-stats i {
+    color: #3498db;
+}
+
+/* Media Link - Matching Sport Link from Homepage */
+.media-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.media-link:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .media-hero {
+        height: 50vh;
+        margin-top: 70px;
+    }
+
+    .media-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .media-hero p {
+        font-size: 1.1rem;
+    }
+
+    .social-media-section,
+    .galleries-section,
+    .press-coverage-section {
+        padding: 4rem 0;
+    }
+
+    .social-media-section h2,
+    .galleries-section h2,
+    .press-coverage-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+
+    .media-row {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .media-card {
+        height: 350px;
+        max-width: none;
+    }
+
+    .media-overlay {
+        padding: 1.5rem;
+    }
+
+    .media-overlay h3 {
+        font-size: 1.3rem;
+    }
+
+    .media-stats {
+        gap: 0.5rem;
+    }
+
+    .media-stats span {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .placeholder-image {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .media-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .media-hero p {
+        font-size: 1rem;
+    }
+
+    .social-media-section h2,
+    .galleries-section h2,
+    .press-coverage-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .media-card {
+        height: 300px;
+    }
+
+    .media-overlay {
+        padding: 1rem;
+    }
+
+    .media-icon i {
+        font-size: 2rem;
+        padding: 0.6rem;
+    }
+
+    .media-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .media-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .media-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .placeholder-image {
+        font-size: 2.5rem;
+    }
+} 
