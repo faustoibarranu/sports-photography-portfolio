@@ -164,16 +164,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-        // Debug image loading
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.sport-image img');
-            images.forEach((img, index) => {
-                console.log(`Image ${index + 1}:`, img.src);
-                img.addEventListener('load', () => console.log(`Image ${index + 1} loaded successfully`));
-                img.addEventListener('error', () => console.log(`Image ${index + 1} failed to load:`, img.src));
-            });
-        });
-    </script>
 </body>
 </html> 
